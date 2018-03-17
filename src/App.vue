@@ -1,9 +1,14 @@
 <template lang="html">
     <main>
+        <section class="main-wrapper">
+            <h2>Портфолио</h2>
+            <my-sites></my-sites>
+        </section>
     </main>
 </template>
 
 <script>
+import mySites from './components/sites.vue';
 
 export default {
     data: () => ({
@@ -11,6 +16,7 @@ export default {
     methods: {
     },
     components: {
+        'my-sites': mySites,
     }
 }
 </script>
@@ -26,5 +32,17 @@ main {
     border: 1px solid #888;
     border-top-width: 0;
     border-bottom-width: 0;
+}
+.main-wrapper {
+    border: 1px solid #888;
+    border-right-width: 0;
+    border-left-width: 0;
+
+    h2 {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
 }
 </style>
