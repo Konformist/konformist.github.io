@@ -53,13 +53,16 @@ footer .layout-wrapper {
 }
 
 footer .contacts {
+    display: flex;
     font-size: 12px;
     font-weight: 600;
 }
 
-footer .email {
+footer .contacts > a {
     padding: 10px;
     display: block;
     text-decoration: none;
     color: white;
 }
+
+footer .contacts > a:hover { background-color: #222; }
