@@ -33,7 +33,6 @@ footer .layout-wrapper {
     max-width: 1200px;
     width: 100%;
     margin: auto;
-    padding: 0 10px;
     display: flex;
     box-sizing: border-box;
 }
@@ -46,22 +45,28 @@ header .about {
 }
 
 header .logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
     flex-shrink: 0;
-    background-color: white;
+    background-image: url('../images/smile.svg');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
 }
 
 footer .layout-wrapper {
-    padding: 10px;
     justify-content: flex-end;
 }
 
 footer .contacts {
+    font-size: 12px;
     font-weight: 600;
 }
 
 footer .email {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
     color: white;
 }
