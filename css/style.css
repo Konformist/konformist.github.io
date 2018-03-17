@@ -1,0 +1,67 @@
+* {
+    font-family: sans;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header, footer {
+    width: 100%;
+    display: flex;
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 0 #000;
+    background-color: black;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header .layout-wrapper,
+footer .layout-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 0 10px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+header .about {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    background-color: white;
+}
+
+footer .layout-wrapper {
+    padding: 10px;
+    justify-content: flex-end;
+}
+
+footer .contacts {
+    font-weight: 600;
+}
+
+footer .email {
+    color: white;
+}
