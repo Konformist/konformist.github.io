@@ -1,13 +1,9 @@
 <template lang="html">
     <div class="sites-wrapper">
-        <section class="site-block" v-for="site in sites">
-            <a v-bind:href="site.link">
-                <div class="site-title">{{ site.name }}</div>
-                <div class="site-image"
-                    v-bind:style="`background-image: url('${site.image}');`">
-                </div>
-            </a>
-        </section>
+        <a class="site-block" v-for="site in sites" v-bind:href="site.link">
+            <div class="site-title">{{ site.name }}</div>
+            <div class="site-image" v-bind:style="addImageSrc(site.image)"></div>
+        </a>
     </div>
 </template>
 
@@ -18,15 +14,20 @@ export default {
             {
                 name: '"Тверской химико-технологический колледж"',
                 link: 'https://thtk.1mcg.ru/',
-                image: 'images/sites/thtk.jpg',
+                image: 'thtk.jpg',
             },
             {
                 name: 'Бонсай',
                 link: 'https://bonsai.asia/',
-                image: 'images/sites/bonsai.png',
+                image: 'bonsai.png',
             },
         ]
-    }}
+    }},
+    methods: {
+        addImageSrc: (name) => {
+            return `background-image: url('images/sites/${name}');`;
+        }
+    }
 }
 </script>
 
@@ -34,35 +35,37 @@ export default {
 .sites-wrapper {
     display: flex;
     flex-wrap: wrap;
+    border-top: 1px solid #888;
 }
 
 .site-block {
     height: 200px;
     flex-basis: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    //border: 1px solid #888;
+    color: black;
+    text-decoration: none;
     box-sizing: border-box;
 
-    &:hover .site-image { filter: blur(2px); }
-
-    a {
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: black;
-        text-decoration: none;
-        box-sizing: border-box;
+    &:hover .site-title {
+        max-width: 100%;
+        max-height: 100%;
+        padding: 30px;
     }
 
     .site-title {
+        max-width: calc(100% - 40px);
+        width: 100%;
+        max-height: calc(100% - 40px);
         padding: 10px;
         z-index: 1;
         font-weight: 600;
         font-size: 18px;
         text-align: center;
+        transition: .15s;
+        box-sizing: border-box;
         background-color: rgba(102, 170, 255, .9);
     }
 

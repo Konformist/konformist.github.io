@@ -38,7 +38,7 @@ main {
     border-right-width: 0;
     border-left-width: 0;
 
-    h2 {
+    > h2 {
         width: 100%;
         margin: 0;
         padding: 10px;
