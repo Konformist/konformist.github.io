@@ -1,8 +1,10 @@
 <template lang="html">
     <div class="sites-wrapper">
-        <a class="site-block" v-for="site in sites" v-bind:href="site.link">
+        <a class="site-block"
+            v-for="site in sites"
+            v-bind:href="site.link"
+            v-bind:style="addImageSrc(site.image)">
             <div class="site-title">{{ site.name }}</div>
-            <div class="site-image" v-bind:style="addImageSrc(site.image)"></div>
         </a>
     </div>
 </template>
@@ -35,50 +37,32 @@ export default {
 .sites-wrapper {
     display: flex;
     flex-wrap: wrap;
-    border-top: 1px solid #888;
 }
 
 .site-block {
     height: 200px;
     flex-basis: 25%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    color: black;
     text-decoration: none;
     box-sizing: border-box;
+    transition: .15s;
+    filter: grayscale(1);
+    background-color: #888;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-    &:hover .site-title {
-        max-width: 100%;
-        max-height: 100%;
-        padding: 30px;
-    }
+    &:hover { filter: grayscale(0); }
 
     .site-title {
-        max-width: calc(100% - 40px);
         width: 100%;
-        max-height: calc(100% - 40px);
+        margin-top: auto;
         padding: 10px;
-        z-index: 1;
         font-weight: 600;
-        font-size: 18px;
         text-align: center;
-        transition: .15s;
-        box-sizing: border-box;
-        background-color: rgba(102, 170, 255, .9);
-    }
-
-    .site-image {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: #888;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        color: black;
+        background-color: rgba(4, 180, 240, .9);
     }
 }
 </style>

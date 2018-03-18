@@ -1,6 +1,14 @@
 <template lang="html">
     <main>
         <section class="main-wrapper">
+            <h2>О себе</h2>
+            <my-about></my-about>
+        </section>
+        <section class="main-wrapper">
+            <h2>Технологии</h2>
+            <my-tech></my-tech>
+        </section>
+        <section class="main-wrapper">
             <h2>Портфолио</h2>
             <my-sites></my-sites>
         </section>
@@ -9,6 +17,8 @@
 
 <script>
 import mySites from './components/sites.vue';
+import myAbout from './components/about.vue';
+import myTech from './components/tech.vue';
 
 export default {
     data: () => ({
@@ -17,6 +27,8 @@ export default {
     },
     components: {
         'my-sites': mySites,
+        'my-about': myAbout,
+        'my-tech': myTech,
     }
 }
 </script>
@@ -27,16 +39,18 @@ main {
     width: 100%;
     margin: auto;
     flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
     overflow-y: auto;
     box-sizing: border-box;
-    border: 1px solid #888;
-    border-top-width: 0;
-    border-bottom-width: 0;
+    border-right: 1px solid #888;
+    border-left: 1px solid #888;
 }
 .main-wrapper {
-    border: 1px solid #888;
-    border-right-width: 0;
-    border-left-width: 0;
+    flex-basis: 50%;
+    flex-grow: 1;
+    box-sizing: border-box;
 
     > h2 {
         width: 100%;
