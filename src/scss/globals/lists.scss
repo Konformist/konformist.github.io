@@ -1,0 +1,24 @@
+.lists-block {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+
+  .list {
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    transition: .4s;
+    box-sizing: border-box;
+    background-color: rgba($color: #fff, $alpha: .1);
+
+    &:hover {
+      color: #000;
+      background-color: #fff;
+    }
+  }
+}

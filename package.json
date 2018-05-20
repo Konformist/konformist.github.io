@@ -7,18 +7,13 @@
     "author": "Konstantin",
     "license": "MIT",
     "scripts": {
-        "start": "webpack --config webpack.config.js",
-        "watch": "webpack --watch"
     },
     "dependencies": {
-        "css-loader": "^0.28.11",
-        "node-sass": "^4.7.2",
-        "sass-loader": "^6.0.7",
-        "vue": "^2.5.16",
-        "vue-loader": "^14.2.1",
-        "vue-template-compiler": "^2.5.16",
-        "webpack": "^4.1.1",
-        "webpack-cli": "^2.0.12"
+        "eslint": "^4.19.1",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^5.0.0",
+        "gulp-babel": "^7.0.1",
+        "gulp-sass": "^4.0.1"
     },
     "devDependencies": {
         "babel-core": "^6.26.0",

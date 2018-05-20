@@ -1,0 +1,22 @@
+.frame-wrapper.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: #fff;
+
+  .about-image {
+    height: 320px;
+    margin: 10px;
+    flex-shrink: 0;
+    flex-basis: 280px;
+    background-color: rgba($color: #fff, $alpha: .1);
+  }
+
+  .about-info {
+    margin: 10px;
+    flex-grow: 1;
+    flex-basis: 280px;
+    line-height: 1.15;
+    letter-spacing: .25px;
+  }
+}

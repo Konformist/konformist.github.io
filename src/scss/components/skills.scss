@@ -1,0 +1,52 @@
+.frame-wrapper.skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* Small only */
+  @media screen and (max-width: 39.9375em) {
+    justify-content: space-around;
+  }
+
+  /* Medium only */
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    justify-content: space-around;
+  }
+
+  .skill {
+    min-width: 200px;
+    margin: 5px;
+    padding: 10px;
+    flex-basis: calc(25% - 10px);
+    font-size: 16px;
+    color: #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+
+    /* Small only */
+    @media screen and (max-width: 39.9375em) {
+      flex-grow: 1;
+    }
+
+    /* Medium only */
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      flex-grow: 1;
+    }
+
+    &-title {
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 5px 0;
+      padding: 0;
+      list-style-type: square;
+      list-style-position: inside;
+    }
+
+    li {
+      padding: 5px;
+      font-size: 14px;
+    }
+  }
+}
