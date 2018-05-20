@@ -17,6 +17,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 
+  /* Small only */
+  @media screen and (max-width: 39.9375em) {
+    background-image: none;
+  }
+
   &.loaded {
     .body-wrapper {
       opacity: 1;
