@@ -223,11 +223,7 @@ body {
   background-image: url("../images/background/200w.gif");
   background-color: #000;
   background-repeat: no-repeat;
-  background-position: center;
-  /* Small only */ }
-  @media screen and (max-width: 39.9375em) {
-    body {
-      background-image: none; } }
+  background-position: center; }
   body.loaded .body-wrapper {
     opacity: 1; }
   body .body-wrapper {

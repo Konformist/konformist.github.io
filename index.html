@@ -13,18 +13,11 @@
 </body>
 <script src="public/plugins/require.js"></script>
 <script>
-  var ready = function(func) {
-    if (typeof func !== 'function') return;
-    if (document.readyState === 'complete') { return func(); }
-
-    document.addEventListener('DOMContentLoaded', fn, false);
-  };
-
-  ready(function() {
+  window.onload = function() {
     setTimeout(function() {
       document.body.classList.add('loaded');
     }, 1000);
-  });
+  }
 
   requirejs.config({
     baseUrl: 'public/js',
