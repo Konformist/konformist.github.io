@@ -1,23 +1,11 @@
 {
-    "name": "MySite",
-    "version": "0.0.1",
-    "description": "This my site",
-    "main": "index.js",
-    "repository": "https://github.com/Konformist/konstantin.github.io.git",
-    "author": "Konstantin",
-    "license": "MIT",
-    "scripts": {
-    },
-    "dependencies": {
-        "eslint": "^4.19.1",
-        "gulp": "^3.9.1",
-        "gulp-autoprefixer": "^5.0.0",
-        "gulp-babel": "^7.0.1",
-        "gulp-sass": "^4.0.1"
-    },
-    "devDependencies": {
-        "babel-core": "^6.26.0",
-        "babel-loader": "^7.1.4",
-        "babel-preset-env": "^1.6.1"
-    }
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "https://github.com/Konformist/konstantin.github.io.git",
+  "author": "Konstantin",
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {}
 }

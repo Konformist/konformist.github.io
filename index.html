@@ -1,32 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
-  <title>My site</title>
-  <link rel="stylesheet" href="public/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
-
 <body>
-  <div id="app"></div>
 </body>
-<script src="public/plugins/require.js"></script>
-<script>
-  window.onload = function() {
-    setTimeout(function() {
-      document.body.classList.add('loaded');
-    }, 1000);
-  }
-
-  requirejs.config({
-    baseUrl: 'public/js',
-    paths: {
-      vue: '../plugins/vue.min',
-    }
-  });
-
-  requirejs(['main']);
-</script>
-
 </html>
